@@ -11,7 +11,7 @@ Edit and Update Screen: This page allows to edit and update todo
 
 ## Videos
 
-[!watch the app video] (lib\assest\WhatsApp Video 2025-08-11 at 4.00.22 PM.mp4)
+https://github.com/Phillip4reall/Todo/issues/1#issue-3310649451
 
 
 ## Prerequisites
