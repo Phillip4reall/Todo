@@ -1,60 +1,4 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:todo/model/models.dart';
 
-// class EditTodo extends ConsumerStatefulWidget {
-//   final Todo todo;
-//   final TextEditingController _controller = TextEditingController();
-//    EditTodo({super.key, required this.todo});
-
-//   Widget build(BuildContext context, Widget ref) {
-
-//     return  Scaffold(
-//       backgroundColor: Colors.white,
-//       appBar: AppBar(
-//         centerTitle: true,
-//         title: Text('Edit Todo',style: TextStyle(color: Colors.white),),
-//         backgroundColor: Theme.of(context).primaryColor,
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.all(16),
-//         child: Column(
-//           //crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Text('Click to edit the todo',style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w200),),
-//             const SizedBox(height: 10),
-//                  TextField(
-//                       controller: _controller,
-//                       decoration: InputDecoration(
-//                         hintStyle: TextStyle(fontWeight: FontWeight.w300),
-//                         hintText: todo.title,
-//                         border: OutlineInputBorder(),
-//                       ),
-//                     //  onSubmitted: (value) => null),//_addTodo(ref, value),
-//                     ),
-        
-//                    const SizedBox(height: 40),
-//                   Container(
-//                     width: double.infinity,
-//                     height: 50,
-//                     decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-//                     child: InkWell(
-//               onTap: (){
-                
-//                 todo.title.replaceAll(todo.title, _controller.text);
-//                 Navigator.pop(context);
-//               },
-//                       child: Center(child: Text('Update Todo',style: TextStyle(color: Colors.white,fontSize: 20),),),
-//                     ),
-//                   ),
-        
-//           ]
-//           ,
-//         ),
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo/model/models.dart';
@@ -119,17 +63,7 @@ class _EditTodoState extends ConsumerState<EditTodo> {
               onSubmitted: (_) => _updateTodo(),
             ),
             const SizedBox(height: 20),
-            // ElevatedButton(
-            //   onPressed: _updateTodo,
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: Theme.of(context).primaryColor,
-            //     minimumSize: const Size(double.infinity, 50),
-            //   ),
-            //   child: const Text(
-            //     'Update Todo',
-            //     style: TextStyle(fontSize: 18, color: Colors.white),
-            //   ),
-            // ),
+           
             Container(
                     width: double.infinity,
                     height: 50,

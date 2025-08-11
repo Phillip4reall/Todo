@@ -60,10 +60,6 @@ class TodoListNotifier extends StateNotifier<List<Todo>> {
      _saveTodos();
   }
 
-  // void clearCompleted() {
-  //   state = state.where((todo) => !todo.isCompleted).toList();
-  // }
-
   void updateTodo(String id, String newTitle) {
   state = [
     for (final todo in state)
@@ -85,22 +81,7 @@ enum TodoFilter { all, active, completed }
 
 final todoFilterProvider = StateProvider<TodoFilter>((ref) => TodoFilter.all);
 final searchQueryProvider = StateProvider<String>((ref) => '');
-// 3. Provider for computed values (filtered todos)
-// final filteredTodosProvider = Provider<List<Todo>>((ref) {
-//   final todos = ref.watch(todoListProvider);
-//   final filter = ref.watch(todoFilterProvider);
-//    final searchQuery = ref.watch(searchQueryProvider).toLowerCase();
 
-//   switch (filter) {
-//     case TodoFilter.all:
-//       return todos;
-//     case TodoFilter.active:
-//       return todos.where((todo) => !todo.isCompleted).toList();
-//     case TodoFilter.completed:
-//       return todos.where((todo) => todo.isCompleted).toList();
-//   }
-//    // Apply search query
-// });
 final filteredTodosProvider = Provider<List<Todo>>((ref) {
   final filter = ref.watch(todoFilterProvider);
   final todos = ref.watch(todoListProvider);

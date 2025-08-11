@@ -39,13 +39,7 @@ class TodoFilters extends ConsumerWidget {
               ],
             ),
           ),
-          // if (stats.completed > 0)
-          //   TextButton(
-          //     onPressed: () {
-          //       ref.read(todoListProvider.notifier).clearCompleted();
-          //     },
-          //     child: Text('Clear All',),
-          //   ),
+          
         ],
       ),
     );
